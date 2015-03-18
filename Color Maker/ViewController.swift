@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var colorView: UIView!
     
+    @IBOutlet weak var redVaule: UILabel!
+    @IBOutlet weak var greenValue: UILabel!
+    @IBOutlet weak var blueValue: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,6 +38,13 @@ class ViewController: UIViewController {
         var b:CGFloat = CGFloat(blueSlider.value)
         colorView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
         
+        var redInt = Int(r*255)
+        var blueInt = Int(g*255)
+        var greenInt = Int(b*255)
+        
+        redVaule.text = "\(redInt)"
+        greenValue.text = "\(blueInt)"
+        blueValue.text = "\(greenInt)"
     }
     
     
