@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
+    @IBOutlet weak var colorView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,11 +28,15 @@ class ViewController: UIViewController {
 
 
     @IBAction func changeColorValue(sender: UISlider) {
-        var redValue = redSlider.value
-        var greenValue = greenSlider.value
-        var blueValue = blueSlider.value
-        
+        var r:CGFloat = CGFloat(redSlider.value)
+        var g:CGFloat = CGFloat(greenSlider.value)
+        var b:CGFloat = CGFloat(blueSlider.value)
+        colorView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
         
     }
+    
+    
+      
+    
 }
 
